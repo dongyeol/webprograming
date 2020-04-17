@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="lecture1.form02.*" %>
+<%@ page import="form.*" %>
 <%
-int userid = 0;
+	int userid = 0;
 String name = "";
 String studentnumber = "";
 int department = 0;
@@ -28,7 +28,7 @@ if (request.getMethod().equals("POST")) {
     else if (s2 == null || s2.length() == 0) 
         에러메시지 = "학년을 입력하세요";
     else {
-        Student student = new Student(userid, studentnumber, name, department, grade);
+        form.Student student = new form.Student(userid, studentnumber, name, department, grade);
         session.setAttribute("student", student);
         response.sendRedirect("studentCreate_success.jsp");
         return;

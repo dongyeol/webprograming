@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="lecture1.form02.*" %>
+<%@ page import="form.*" %>
 <%
 Student student= (Student)session.getAttribute("student");
 %>
